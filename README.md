@@ -38,13 +38,13 @@ This produces **layer-by-layer similarity profiles** for each training step, giv
 
 ## Repository Structure
 ```
-├── .venv/ # Virtual environment (Python)
-├── convergance_plots/ # Output plots from token convergence analysis
-├── multitoken_words_plots/ # Output plots from multi-token context perturbation
-├── pythia_1b_checkpoints/ # Downloaded model checkpoints
-├── download_checkpoints.py # Script to download Pythia-1B checkpoints
-├── multitoken_context_perturbation.py # Second experiment (context perturbation)
-├── multitoken_words_contexts.json # Multi-token words + contexts for second experiment
-├── token_convergence_analysis.py # First experiment (token convergence)
-└── words_list.json # Word list for first experiment
+├── .venv/                                # Virtual environment (Python)
+├── convergance_plots/                    # Output plots from token convergence analysis
+├── multitoken_words_plots/               # Output plots from multi-token context perturbation
+├── pythia_1b_checkpoints/                # Downloaded model checkpoints
+├── download_checkpoints.py               # Script to download Pythia-1B checkpoints
+├── multitoken_context_perturbation.py    # Second experiment (context perturbation)
+├── multitoken_words_contexts.json        # Multi-token words + contexts for second experiment
+├── token_convergence_analysis.py         # First experiment (token convergence)
+└── words_list.json                       # Word list for first experiment
 ```
