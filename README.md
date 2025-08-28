@@ -39,12 +39,12 @@ The project consists of **two main experimental parts**:
 
 ### 2. Analysis of Multi-Token Representations
 
-**Experiment 1**  
+**Experiment - part 1**
 - **Script:** `multitoken_context_perturbation.py`  
 - **Word/context source:** `multitoken_words_contexts.json` (from [Salesforce/wikitext](https://huggingface.co/datasets/Salesforce/wikitext))  
 - **Results folder:** `multitoken_words_plots/`
 
-**Experiment 2**  
+**Experiment - part 2**
 - **Scripts:**  
   - `multitoken_create_csv_files.py`  
   - `multitoken_load_and_analyze_by_token_count_csv.py`  
@@ -71,12 +71,12 @@ The project consists of **two main experimental parts**:
 ├── layer0_freq_analysis.py # (part 1 - experiment 4.3)
 ├── layer0_token_freq_convergence/ # (part 1 - experiment 4.3)
 │
-├── multitoken_context_perturbation.py # (part 2 - experiment 1)
-├── multitoken_words_plots/ # (part 2 - experiment 1)
-├── multitoken_create_csv_files.py # (part 2 - experiment 2)
-├── multitoken_load_and_analyze_by_token_count_csv.py # (part 2 - experiment 2)
-├── multitoken_words_group_csvs/ # (part 2 - experiment 2)
-│ └── revision_plots/ # (part 2 - experiment 2)
+├── multitoken_context_perturbation.py # (part 2 - experiment - part 1)
+├── multitoken_words_plots/ # (part 2 - experiment - part 1)
+├── multitoken_create_csv_files.py # (part 2 - experiment - part 2)
+├── multitoken_load_and_analyze_by_token_count_csv.py # (part 2 - experiment - part 2)
+├── multitoken_words_group_csvs/ # (part 2 - experiment - part 2)
+│ └── revision_plots/ # (part 2 - experiment - part 2)
 │
 ├── last_subword_length_histogram.py # Script to analyze last-subword token length distributions
 ├── last_subword_length_histograms/ # Histograms of last-subword token lengths
