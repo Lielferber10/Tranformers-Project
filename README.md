@@ -55,7 +55,6 @@ The project consists of **two main experimental parts**:
 
 ---
 ```## Repository Structure
-├── .venv/ # Local Python virtual environment
 ├── pycache/ # Auto-generated Python bytecode cache
 ├── pythia_1b_checkpoints/ # Downloaded Pythia-1B model checkpoints
 ├── download_checkpoints.py # Script to download Pythia-1B checkpoints
