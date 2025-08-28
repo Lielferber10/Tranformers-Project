@@ -4,47 +4,53 @@ This repository contains code, data, and results for analyzing how token represe
 
 ## Project Overview
 
-The project consists of **two main experiments**:
+The project consists of **two main experimental tracks**:
 
 ---
 
-### 1. Token Convergence Analysis
-We track token convergence across training revisions by comparing **layerwise cosine similarity** between intermediate hidden states of single-token words, multi-token words and their **final trained counterparts**.
+### 1. Convergence Analysis of Token Groups
 
-The analysis:
-- Averages results within each token group
-- Produces convergence graphs for each token group
-- Aggregates results into a single plot per layer
-- Reveals how representational stability changes during training
+**Experiment 1**  
+- **Script:** `token_convergence_analysis.py`  
+- **Word list source:** `words_list.json` (derived from [`word_freq_32k.json`](https://github.com/BilboBlockins/word-frequency-list-json/tree/master))  
+- **Results folder:** `convergence_plots/`
 
-**Script:** `token_convergence_analysis.py`  
-**Word list source:** `words_list.json` (derived from [`word_freq_32k.json`](https://github.com/BilboBlockins/word-frequency-list-json/tree/master))  
-**Results folder:** `convergance_plots/`
+**Experiment 2**  
+- **Script:** `random_tokens_convergence_analysis.py`  
+- **Results folder:** `random_tokens_convergence_plots/`
+
+**Experiment 3**  
+- **Script:** `10_tokens_sequences.py`  
+- **Results folder:** `10_tokens_sequences_convergence_plots/`
+
+**Experiment 4.1**  
+- **Script:** `layer0_token_lengths_analysis.py`  
+- **Results folder:** `layer0_token_length_convergence_plots/`
+
+**Experiment 4.2**  
+- **Script:** `layer0_realword_analysis.py`  
+- **Results folder:** `layer0_last_token_realword_convergence/`
+
+**Experiment 4.3**  
+- **Script:** `layer0_freq_analysis.py`  
+- **Results folder:** `layer0_token_freq_convergence/`
 
 ---
 
-### 2. Multi-Token Context Perturbation
-We analyze individual multi-token word representations across layers and training steps by comparing their base representations to two variants:
-- **P1:** The same word in different contexts
-- **P2:** Versions with the last word perturbed
+### 2. Analysis of Multi-Token Representations
 
-This produces **layer-by-layer similarity profiles** for each training step, giving insight into the development of **compositional word representations**.
+**Experiment 1**  
+- **Script:** `multitoken_context_perturbation.py`  
+- **Word/context source:** `multitoken_words_contexts.json` (from [Salesforce/wikitext](https://huggingface.co/datasets/Salesforce/wikitext))  
+- **Results folder:** `multitoken_words_plots/`
 
-**Script:** `multitoken_context_perturbation.py`  
-**Word/context source:** `multitoken_words_contexts.json` (obtained from _____)  
-**Results folder:** `multitoken_words_plots/`
+**Experiment 2**  
+- **Scripts:**  
+  - `multitoken_create_csv_files.py`  
+  - `multitoken_load_and_analyze_by_token_count_csv.py`  
+- **Word/context source:** `multitoken_words_contexts.json` (from [Salesforce/wikitext](https://huggingface.co/datasets/Salesforce/wikitext))  
+- **Results folders:**  
+  - `multitoken_words_group_csvs/` (CSV files)  
+  - `multitoken_words_group_csvs/revision_plots/` (plots)  
 
 ---
-
-## Repository Structure
-```
-├── .venv/                                # Virtual environment (Python)
-├── convergance_plots/                    # Output plots from token convergence analysis
-├── multitoken_words_plots/               # Output plots from multi-token context perturbation
-├── pythia_1b_checkpoints/                # Downloaded model checkpoints
-├── download_checkpoints.py               # Script to download Pythia-1B checkpoints
-├── multitoken_context_perturbation.py    # Second experiment (context perturbation)
-├── multitoken_words_contexts.json        # Multi-token words + contexts for second experiment
-├── token_convergence_analysis.py         # First experiment (token convergence)
-└── words_list.json                       # Word list for first experiment
-```
