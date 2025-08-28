@@ -56,8 +56,7 @@ The project consists of **two main experimental parts**:
 ---
 ```## Repository Structure
 ├── pycache/ # Auto-generated Python bytecode cache
-├── pythia_1b_checkpoints/ # Downloaded Pythia-1B model checkpoints
-├── download_checkpoints.py # Script to download Pythia-1B checkpoints
+├── download_checkpoints.py # Script to download Pythia-1B checkpoints (creates pythia_1b_checkpoints folder with the desired checkpoints)
 │
 ├── token_convergence_analysis.py # (part 1 - experiment 1)
 ├── convergence_plots/ # (part 1 - experiment 1)
